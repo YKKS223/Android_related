@@ -400,24 +400,24 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 
         runOnUiThread {
             //角度表示(ジャイロ積分)
-            textViewX.text = "角度X(Gyro): %.1f °".format(angleX)
-            textViewY.text = "角度Y(Gyro): %.1f °".format(angleY)
-            textViewZ.text = "角度Z(Gyro): %.1f °".format(angleZ)
+            textViewX.text = "角度X: %.1f °".format(angleX)
+            textViewY.text = "角度Y: %.1f °".format(angleY)
+            textViewZ.text = "角度Z: %.1f °".format(angleZ)
 
             //ワールド座標系の加速度(EKFへの入力、デバッグ用)
             textViewWorldAcc.text = "加速(W): X:%.2f Y:%.2f Z:%.2f".format(worldAccel[0], worldAccel[1], worldAccel[2])
 
             //EKFによる速度(m/s)
             val worldSpeed = sqrt(velocity[0] * velocity[0] + velocity[1] * velocity[1] + velocity[2] * velocity[2])
-            textViewVelocity.text = "速度(EKF): %.2f m/s".format(worldSpeed)
+            textViewVelocity.text = "速度: %.2f m/s".format(worldSpeed)
 
             //時速(km/h)
             val worldSpeedKmh = worldSpeed * 3.6f
-            textViewVelocityh.text = "時速(EKF): %.1f km/h".format(worldSpeedKmh)
+            textViewVelocityh.text = "時速: %.1f km/h".format(worldSpeedKmh)
 
             //EKFによる変位(m)
             val totalWorldDistance = sqrt(position[0] * position[0] + position[1] * position[1] + position[2] * position[2])
-            textViewDistance.text = "変位(EKF): %.2f m (X:%.2f Y:%.2f Z:%.2f)".format(totalWorldDistance, position[0], position[1], position[2])
+            textViewDistance.text = "変位(中): %.2f m (X:%.2f Y:%.2f Z:%.2f)".format(totalWorldDistance, position[0], position[1], position[2])
 
             //静止状態表示
             if (isStationary) {
