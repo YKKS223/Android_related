@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="ジャイロセンサーの値から角度を計算中..." />
+
+    <TextView
+        android:id="@+id/textViewX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:textSize="24sp"
+        tools:text="X軸周り: 0.00 °" />
+
+    <TextView
+        android:id="@+id/textViewY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:textSize="24sp"
+        tools:text="Y軸周り: 0.00 °" />
+
+    <TextView
+        android:id="@+id/textViewZ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        tools:text="Z軸周り: 0.00 °" />
+
+    <TextView
+        android:id="@+id/textViewVelocity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textSize="18sp"
+        android:text="速度：0.00 m/s" />
+
+    <TextView
+        android:id="@+id/textViewVelocityh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:textSize="18sp"
+        android:text="速度 (km/h): 計算中..."
+        tools:text="速度: 0.0 km/h"/>
+
+    <TextView
+        android:id="@+id/textViewDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textSize="10sp"
+        android:text="距離：0.00 m" />
+
+    <TextView
+        android:id="@+id/textViewWorldAcc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="訂正：0.00 " />
+
+    <TextView
+        android:id="@+id/textViewWarning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="注意: ジャイロのみの角度計算はドリフト（誤差蓄積）が発生します。"
+        android:textColor="@android:color/holo_red_dark" />
+
+
+</LinearLayout>
